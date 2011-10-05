@@ -26,6 +26,15 @@ require('beans.http');
 var router = require('beanpole').router();
 
 
+router.params({
+	
+	'http.gateway': {
+		'http': {
+			port: 8080
+		}
+	}
+})
+
 //load all the beans
 router.require('beans.http');
 
