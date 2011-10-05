@@ -9,7 +9,9 @@
     },
     "directories" :   { "lib" : "./lib" },
     "dependencies": {
-        "structr":"*"
+        "structr":"*",
+        "vine":"*",
+        "mime":"*"
     },
     
     "main": "./plugin/index.js"

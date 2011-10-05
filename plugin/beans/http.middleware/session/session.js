@@ -1,10 +1,11 @@
 var Structr = require('structr'),
-utils = require('sk/node/utils'),
-base64 = utils.base64,
-uid = utils.uid,
 Cookie = require('./cookies').Cookie;
 
 
+function uid()
+{
+	return Date.now() + '.' + (Math.random() * 999999);
+}
 
 
 var Session = Structr({
