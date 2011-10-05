@@ -12,5 +12,5 @@
         "structr":"*"
     },
     
-    "main": "./lib/node/index.js"
+    "main": "./plugin/index.js"
 }
