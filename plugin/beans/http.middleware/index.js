@@ -53,7 +53,7 @@ exports.plugin = function(router)
 		 * basic authentication passthru
 		 */
 
-		'pull -private (basic/auth/:user/:pass or basic/auth)': function()
+		'pull -private (basic/auth/:user/:pass OR basic/auth)': function()
 		{
 			if(!this.req) return vine.error('basic auth is specific to http for now').end();
 
@@ -94,14 +94,23 @@ exports.plugin = function(router)
 		 * parses post body
 		 */
 
-		/*'pull -private /*': function()
+		'pull -private parse/body': function(request)
 		{
-
-
-			if(!this.next())
+			if(!request.req) return vine.error('parse/body is only usable on http requests').end();
+			
+			var body = '';
+			
+			request.req.on('data', function(chunk)
 			{
-				return "GOLD"
-			}
-		}*/
+				body += chunk;
+			});
+			
+			request.req.on('end', function(chunk)
+			{
+				request.body = body;
+				
+				request.next();
+			});
+		}
 	})
 }
