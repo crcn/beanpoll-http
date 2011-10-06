@@ -170,6 +170,7 @@ exports.plugin = function(router, params)
 		//run through the middleware, modify anything
 		mw.request(ops, function(newOps)
 		{
+			console.log('http request: %s'.grey, newOps.channel)
 
 			//finally make the request
 			router.pull(newOps.channel, newOps.query, { req: req, res: res, meta: newOps.requestMeta, host: newOps.host, sendFile: sendFile }, function(request)

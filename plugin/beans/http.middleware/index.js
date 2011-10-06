@@ -1,13 +1,19 @@
 var MemSessionManager = require('./session/session').MemSessionManager,
 	Cookie = require('./session/cookies').Cookie,
 	vine = require('vine'),
-	basic = require('./auth/basic');
+	basic = require('./auth/basic'),
+	qs = require('querystring');
 
 
 exports.plugin = function(router)
 {
 
 	var session = new MemSessionManager();
+	
+	var bodyParser = {
+	    'application/x-www-form-urlencoded': qs.parse
+	  , 'application/json': JSON.parse
+	};
 
 	router.on({
 		
@@ -99,6 +105,7 @@ exports.plugin = function(router)
 			if(!request.req) return vine.error('parse/body is only usable on http requests').end();
 			
 			var body = '';
+			parser = bodyParser[request.req.headers['content-type']];
 			
 			request.req.on('data', function(chunk)
 			{
@@ -107,7 +114,14 @@ exports.plugin = function(router)
 			
 			request.req.on('end', function(chunk)
 			{
-				request.body = body;
+				try
+				{
+					request.body = body && parser ? parser(body) : body || {};
+				}
+				catch(e)
+				{
+					request.body = null;
+				}
 				
 				request.next();
 			});
