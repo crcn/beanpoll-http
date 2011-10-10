@@ -8,7 +8,8 @@ Url = require('url'),
 mime = require('mime'),
 Structr = require('structr'),
 Middleware = require('./middleware'),
-fs = require('fs');
+fs = require('fs'),
+jsonh = require('jsonh');
 
 
 
@@ -113,6 +114,24 @@ exports.plugin = function(router, params)
 
 		//query data
 		query = Structr.copy(urlParts.query, req.query, true);
+		
+		
+		//use json over qs
+		if(query.json)
+		{
+			try
+			{
+				
+				//copy the json string to the qs - there may be addition qs vars
+				Structr.copy(JSON.parse(query.json), query);
+				delete query['json']
+			}
+			catch(e)
+			{
+				
+			}
+		}
+		
 
 		//need to check a few things 
 		var listener = routeListener(channel),
@@ -163,7 +182,7 @@ exports.plugin = function(router, params)
 				passive: 1, 
 
 				//try filtering out the request method before going to the default. e.g: GET, POST, PUT
-				method: tryMeta(channel, 'method', req.method.toUpperCase()), 
+				method: tryMeta(channel, 'method', query.httpMethod || req.method.toUpperCase()), 
 			}
 		};
 
@@ -171,6 +190,7 @@ exports.plugin = function(router, params)
 		mw.request(ops, function(newOps)
 		{
 			console.log('http request: %s'.grey, newOps.channel)
+			
 
 			//finally make the request
 			router.pull(newOps.channel, newOps.query, { req: req, res: res, meta: newOps.requestMeta, host: newOps.host, sendFile: sendFile }, function(request)
@@ -259,9 +279,16 @@ exports.plugin = function(router, params)
 					write: function(data)
 					{
 						var chunk = data;
+						
+						
 
 						if(data instanceof Object)
 						{
+							if(query.compress != undefined && (data.result instanceof Array))
+							{
+								data.result = jsonh.pack(data.result);
+							}
+							
 							chunk = JSON.stringify(data);
 
 							if(data.errors)
