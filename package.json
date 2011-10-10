@@ -1,7 +1,7 @@
 {
     "name": "bean.http",
     "description": "HTTP beans for beanpole",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "author": "Craig Condon",
     "repository": {
         "type": "git",
@@ -11,11 +11,12 @@
     "dependencies": {
         "structr":"*",
         "vine":"*",
-        "mime":"*"
+        "mime":"*",
+        "jsonh":"*"
     },
     "devDependencies": {
         "beanpole":"*"
-    }
+    },
     
     "main": "./plugin/index.js"
 }
