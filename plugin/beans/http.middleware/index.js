@@ -84,7 +84,7 @@ exports.plugin = function(router)
 					if(err)
 					{
 						
-						if(self.data.basicAuth) self.respond({ authorization: { http: err } });
+						if(self.data.basicAuth == undefined || self.data.basicAuth) self.respond({ authorization: { http: err } });
 
 						return self.end(vine.error('Unauthorized.').end());
 					}
