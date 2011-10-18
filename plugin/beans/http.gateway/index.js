@@ -8,8 +8,7 @@ Url = require('url'),
 mime = require('mime'),
 Structr = require('structr'),
 Middleware = require('./middleware'),
-fs = require('fs'),
-jsonh = require('jsonh');
+fs = require('fs');
 
 
 
@@ -61,8 +60,8 @@ exports.plugin = function(router, params)
 
  		//channel exists? skip
  		if(ops.exists) return next();
-
-		var fullPath = ((params.dir || '') + '/' + ops.pathname).replace(/\/+/g,'/'),
+                                                                                       
+		var fullPath = ((params.dir || '') + '/' + decodeURIComponent(ops.pathname)).replace(/\/+/g,'/'),
 		res = ops.res;
 			
 		sendFile(fullPath, res, ops.mime);
@@ -284,10 +283,10 @@ exports.plugin = function(router, params)
 
 						if(data instanceof Object)
 						{
-							if(query.compress != undefined && (data.result instanceof Array))
+							/*if(query.compress != undefined && (data.result instanceof Array))
 							{
 								data.result = jsonh.pack(data.result);
-							}
+							}*/
 							
 							chunk = JSON.stringify(data);
 
