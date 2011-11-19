@@ -98,7 +98,7 @@ exports.plugin = function(router, params)
 		res.writeHead(401, {'Content-Type': 'text/plain'});
 		res.end("Unauthorized");
 	}
-
+	
 
 	function onRequest(req, res)
 	{
@@ -142,6 +142,9 @@ exports.plugin = function(router, params)
 		{
 			return _401(res);
 		}
+		
+		var rmethod = (query.httpMethod || req.method).toUpperCase();
+		var method = tryMeta(channel, 'method', method);
 
 		var ops = { 
 
@@ -181,14 +184,14 @@ exports.plugin = function(router, params)
 				passive: 1, 
 
 				//try filtering out the request method before going to the default. e.g: GET, POST, PUT
-				method: tryMeta(channel, 'method', query.httpMethod || req.method.toUpperCase()), 
+				method: method, 
 			}
 		};
 
 		//run through the middleware, modify anything
 		mw.request(ops, function(newOps)
 		{
-			console.log('%s request: %s'.grey, req.method, newOps.channel)
+			console.log('%s request: %s'.grey, rmethod, newOps.channel)
 			
 
 			//finally make the request
