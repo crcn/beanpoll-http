@@ -188,7 +188,7 @@ exports.plugin = function(router, params)
 		//run through the middleware, modify anything
 		mw.request(ops, function(newOps)
 		{
-			console.log('http request: %s'.grey, newOps.channel)
+			console.log('%s request: %s'.grey, req.method, newOps.channel)
 			
 
 			//finally make the request
