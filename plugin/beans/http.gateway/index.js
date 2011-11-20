@@ -144,7 +144,7 @@ exports.plugin = function(router, params)
 		}
 		
 		var rmethod = (query.httpMethod || req.method).toUpperCase();
-		var method = tryMeta(channel, 'method', method);
+		var method = tryMeta(channel, 'method', rmethod);
 
 		var ops = { 
 
@@ -187,6 +187,7 @@ exports.plugin = function(router, params)
 				method: method, 
 			}
 		};
+		
 
 		//run through the middleware, modify anything
 		mw.request(ops, function(newOps)

@@ -28,17 +28,32 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>376</integer>
+				<integer>377</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>329</integer>
+			<integer>330</integer>
+		</dict>
+		<key>plugin/beans/http.gateway/middleware.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>plugin/beans/http.gateway/index.js</string>
+		<string>plugin/beans/http.gateway/middleware.js</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
