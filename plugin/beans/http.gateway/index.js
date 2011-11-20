@@ -143,7 +143,7 @@ exports.plugin = function(router, params)
 			return _401(res);
 		}
 		
-		var rmethod = (query.httpMethod || req.method).toUpperCase();
+		var rmethod = (query.httpMethod || req.method || '').toString().toUpperCase();
 		var method = tryMeta(channel, 'method', rmethod);
 
 		var ops = { 
