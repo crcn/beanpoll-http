@@ -267,6 +267,7 @@ exports.plugin = function(router, params)
 						{
 							newOps.mime = response.mime;
 						}
+						
 
 						headers['Expires']		 = '17-Jan-2038 19:14:07 GMT';
 						headers['Connection'] 	 = 'keep-alive';

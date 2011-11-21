@@ -26,14 +26,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>6</integer>
 				<key>line</key>
-				<integer>377</integer>
+				<integer>269</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>330</integer>
+			<integer>269</integer>
 		</dict>
 		<key>plugin/beans/http.gateway/middleware.js</key>
 		<dict>
@@ -58,6 +58,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{210, 4}, {1230, 874}}</string>
+	<string>{{324, 79}, {1230, 874}}</string>
 </dict>
 </plist>
