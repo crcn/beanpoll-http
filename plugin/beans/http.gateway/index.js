@@ -187,12 +187,14 @@ exports.plugin = function(router, params)
 				method: method, 
 			}
 		};
+
+
+		console.log('%s request: %s'.grey, rmethod, req.url);
 		
 
 		//run through the middleware, modify anything
 		mw.request(ops, function(newOps)
 		{
-			console.log('%s request: %s'.grey, rmethod, newOps.channel)
 			
 
 			//finally make the request
