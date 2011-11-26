@@ -188,8 +188,9 @@ exports.plugin = function(router, params)
 			}
 		};
 
-
 		console.log('%s request: %s'.grey, rmethod, req.url);
+		// console.log('query: ');
+		// console.log(query);
 		
 
 		//run through the middleware, modify anything
