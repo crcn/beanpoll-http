@@ -8,7 +8,10 @@
 	"buffers":
 	[
 		{
+			"contents": "",
 			"file": "/tmp/subl stdin vraJb4.txt",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
 				"buffer_size": 0,
@@ -40,6 +43,7 @@
 	},
 	"file_history":
 	[
+		"/tmp/subl stdin PMwlNy.txt",
 		"/tmp/subl stdin 292YvE.txt"
 	],
 	"find":
@@ -90,6 +94,7 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
 				{

@@ -1,21 +1,22 @@
 {
     "name": "bean.http",
     "description": "HTTP beans for beanpole",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "author": "Craig Condon",
     "repository": {
         "type": "git",
         "url": "http://github.com/crcn/bean.http.git"
     },
-    "directories" :   { "lib" : "./lib" },
+    "directories": {
+        "lib": "./lib"
+    },
     "dependencies": {
-        "structr":"*",
-        "vine":"*",
-        "mime":"*"
+        "structr": "*",
+        "vine": "*",
+        "mime": "*"
     },
     "devDependencies": {
-        "beanpole":"*"
+        "beanpole": "*"
     },
-    
     "main": "./plugin/index.js"
 }
