@@ -17,6 +17,22 @@
 				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "/tmp/subl stdin 6VJPgl.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "plugin/beans/http.gateway/index.js",
+			"settings":
+			{
+				"buffer_size": 8571,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -62,6 +78,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"json",
 			"char",
 			"onEnd",
 			"register",
@@ -94,7 +111,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -119,6 +136,59 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/tmp/subl stdin 6VJPgl.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "plugin/beans/http.gateway/index.js",
+					"settings":
+					{
+						"buffer_size": 8571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2716,
+								2716
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1380.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
