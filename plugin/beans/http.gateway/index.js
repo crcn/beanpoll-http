@@ -6,9 +6,9 @@ var vine = require('vine'),
 prettyjson = require('./prettyjson'),
 Url = require('url'),
 mime = require('mime'),
-Structr = require('structr'),
 Middleware = require('./middleware'),
-fs = require('fs');
+fs = require('fs'),
+_ = require('underscore');
 
 
 
@@ -112,7 +112,7 @@ exports.plugin = function(router, params)
 		mimeType = mime.lookup(fileType || '', 'text/plain'),
 
 		//query data
-		query = Structr.copy(urlParts.query, req.query, true);
+		query = _.extend(urlParts.query, req.query);
 		
 		
 		//use json over qs
@@ -122,7 +122,7 @@ exports.plugin = function(router, params)
 			{
 				
 				//copy the json string to the qs - there may be addition qs vars
-				Structr.copy(JSON.parse(decodeURIComponent(query.json)), query);
+				_.extend(query, JSON.parse(decodeURIComponent(query.json)));
 				delete query['json']
 			}
 			catch(e)

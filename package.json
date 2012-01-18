@@ -13,7 +13,8 @@
     "dependencies": {
         "structr": "*",
         "vine": "*",
-        "mime": "*"
+        "mime": "*",
+        "underscore":"*"
     },
     "devDependencies": {
         "beanpole": "*"
