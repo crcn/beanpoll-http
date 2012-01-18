@@ -30,7 +30,23 @@
 			"file": "plugin/beans/http.gateway/index.js",
 			"settings":
 			{
-				"buffer_size": 8571,
+				"buffer_size": 8554,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin tzuxD3.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 491,
 				"line_ending": "Unix"
 			}
 		}
@@ -78,6 +94,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Structr.c",
 			"json",
 			"char",
 			"onEnd",
@@ -171,15 +188,15 @@
 					"file": "plugin/beans/http.gateway/index.js",
 					"settings":
 					{
-						"buffer_size": 8571,
+						"buffer_size": 8554,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2716,
-								2716
+								2459,
+								2459
 							]
 						],
 						"settings":
@@ -188,7 +205,61 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1380.0,
+						"translation.y": 1261.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/tmp/subl stdin tzuxD3.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "package.json",
+					"settings":
+					{
+						"buffer_size": 491,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								393,
+								393
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -122,11 +122,12 @@ exports.plugin = function(router, params)
 			{
 				
 				//copy the json string to the qs - there may be addition qs vars
-				_.extend(query, JSON.parse(decodeURIComponent(query.json)));
+				_.extend(query, JSON.parse(query.json));
 				delete query['json']
 			}
 			catch(e)
 			{
+				console.log(e)
 			}
 		}
 		
