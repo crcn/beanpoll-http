@@ -1,7 +1,10 @@
 var http = require('http'),
 https = require('https'),
+connect = require('connect'),
 exec = require('child_process').exec,
-vine = require('vine');
+vine = require('vine'),
+logger = require('winston').loggers.get('bean.http'),
+sprintf = require('sprintf').sprintf;
 
 
 exports.plugin = function(router, params) 
@@ -41,10 +44,10 @@ exports.plugin = function(router, params)
 	    /**
 	     */
 
-	    'pull http/start': function(request)
+	    'pull http/start': function(req, res)
 	    {
-	    	var secure = request.data.secure,
-	    	port = request.data.port || (secure ? 443 : 8000),
+	    	var secure = req.query.secure,
+	    	port = req.query.port || (secure ? 443 : 8000),
 		    serv = secure ? https : http,
             cached = servers[secure];
             
@@ -56,7 +59,7 @@ exports.plugin = function(router, params)
                     inst.listen(port);
                     inst.port = port;
 
-                    console.success('Started http server on port %d', port);
+                    logger.info(sprintf('started http server on port %d', port));
                     
                     if(!inst.pushed) router.push('http/server', inst);
                     
@@ -67,15 +70,15 @@ exports.plugin = function(router, params)
                         router.push('http/host', httpHost = { hostname: name, port: port });
                     })
                     
-                    request.end(inst);
+                    res.end(inst);
                 }
                 catch(e)
                 {
                     var msg = 'Unable to start http server on port %d';
                     
-                    console.warn(msg, port);
+                    console.warn(sprintf(msg, port));
                     
-                    request.end(vine.error(msg, port).end());
+                    res.end(vine.error(msg, port).end());
                 }
                 
                 return inst;
@@ -105,8 +108,8 @@ exports.plugin = function(router, params)
 
                     if(cached.fd)
                     {
-                        console.notice('http server on port %s is already running', cached.port);
-                        request.end(cached);
+                        logger.info(sprintf('http server on port %s is already running', cached.port));
+                        res.end(cached);
                     }
                     else
                     {
@@ -117,15 +120,15 @@ exports.plugin = function(router, params)
                 return;
             }
 
-            listen(servers[secure] = serv.createServer());
+            listen(servers[secure] = connect.createServer());
 	    },
 
 	    /**
 	     */
 
-	    'pull http/host': function()
+	    'pull http/host': function(req, res)
 	    {
-	    	return httpHost;
+	    	res.end(httpHost);
 	    }
 
     })

@@ -1,7 +1,7 @@
 {
     "name": "bean.http",
     "description": "HTTP beans for beanpole",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "author": "Craig Condon",
     "repository": {
         "type": "git",
@@ -11,10 +11,15 @@
         "lib": "./lib"
     },
     "dependencies": {
+        "connect": "*",
+        "haba": "*",
         "structr": "*",
         "vine": "*",
         "mime": "*",
-        "underscore": "*"
+        "underscore": "*",
+        "winston": "<0.6.0",
+        "sprintf": "*",
+        "tq": "*"
     },
     "devDependencies": {
         "beanpole": "*"

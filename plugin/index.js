@@ -1,4 +1,4 @@
-require.paths.unshift(__dirname + '/beans');
+require('haba').paths(__dirname + '/beans');
 
 exports.plugin = function(router)
 {
