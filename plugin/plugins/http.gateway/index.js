@@ -44,10 +44,8 @@ exports.plugin = function(router) {
 		         * middleware for the requests
 		         */
 
-		        'push -collect http/request/middleware': function(middleware)
+		        'push -collect http/request/middleware OR connect/middleware': function(middleware)
 		        {
-
-		        	// mw.add(middleware);
 		        	use.push(middleware);
 		        }
 			});
