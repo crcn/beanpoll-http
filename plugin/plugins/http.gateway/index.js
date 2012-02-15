@@ -29,13 +29,10 @@ exports.plugin = function(router) {
         'push init': function()
         {
         	//params present? start the http port
-			if(params)
-			{
-				if(httpParams.port)
-				{
-					router.request('http/start', { port: httpParams.port }).pull();
-				}
-			}
+			if(httpParams.port)
+            {
+                router.request('http/start', { port: httpParams.port }).pull();
+            }
 
 
 			router.on({

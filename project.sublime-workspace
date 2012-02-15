@@ -137,7 +137,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 609,
+				"buffer_size": 613,
 				"line_ending": "Unix"
 			}
 		},
@@ -180,7 +180,7 @@
 			"file": "plugin/index.js",
 			"settings":
 			{
-				"buffer_size": 122,
+				"buffer_size": 141,
 				"line_ending": "Unix"
 			}
 		},
@@ -201,10 +201,42 @@
 			}
 		},
 		{
+			"file": "/tmp/subl stdin UAcpJ1.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "/tmp/subl stdin tsqbm2.txt",
 			"settings":
 			{
 				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "plugin/plugins/http.server/index.js",
+			"settings":
+			{
+				"buffer_size": 3202,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1297,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "plugin/plugins/http.gateway/index.js",
+			"settings":
+			{
+				"buffer_size": 1701,
 				"line_ending": "Unix"
 			}
 		}
@@ -253,6 +285,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"params.",
 			"req.meth",
 			"content-type",
 			"console.lo",
@@ -305,7 +338,7 @@
 	"groups":
 	[
 		{
-			"selected": 22,
+			"selected": 20,
 			"sheets":
 			[
 				{
@@ -711,15 +744,15 @@
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 609,
+						"buffer_size": 613,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								347,
+								347
 							]
 						],
 						"settings":
@@ -845,15 +878,15 @@
 					"file": "plugin/index.js",
 					"settings":
 					{
-						"buffer_size": 122,
+						"buffer_size": 141,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								122,
-								122
+								32,
+								32
 							]
 						],
 						"settings":
@@ -921,6 +954,32 @@
 				},
 				{
 					"buffer": 23,
+					"file": "/tmp/subl stdin UAcpJ1.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 24,
 					"file": "/tmp/subl stdin tsqbm2.txt",
 					"settings":
 					{
@@ -941,6 +1000,89 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "plugin/plugins/http.server/index.js",
+					"settings":
+					{
+						"buffer_size": 3202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								317,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 1297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1149,
+								1149
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 677.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "plugin/plugins/http.gateway/index.js",
+					"settings":
+					{
+						"buffer_size": 1701,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								933,
+								915
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 242.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
