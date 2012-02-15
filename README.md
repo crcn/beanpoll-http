@@ -16,33 +16,24 @@
 
 ### Usage
 
-First off, use this block of code wherever you want to include the http beans:
+Basic Configuration:
 
 ```javascript
 
 //sets add a require path to the app
-require('beans.http');
 
-var router = require('beanpole').router();
+var loader = require('beanie');
 
 
-router.params({
-	
-	'http.gateway': {
-		'http': {
-			port: 8080
-		}
+loader.params({
+	publicDir: __dirname + "/public"
+	http: {
+		port: 8080
 	}
-})
+});
 
-//load all the beans
-router.require('beans.http');
-
-
-//or load them individually
-router.require('http.gateway','http.server','http.middleware');
-
-
+loader.
+require('beanpoll-http');
 ```
 
 

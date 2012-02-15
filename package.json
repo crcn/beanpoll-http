@@ -1,5 +1,5 @@
 {
-    "name": "bean.http",
+    "name": "beanpoll-http",
     "description": "HTTP beans for beanpole",
     "version": "0.0.8",
     "author": "Craig Condon",
@@ -22,7 +22,7 @@
         "tq": "*"
     },
     "devDependencies": {
-        "beanpole": "*"
+        "beanie": "*"
     },
     "main": "./plugin/index.js"
 }

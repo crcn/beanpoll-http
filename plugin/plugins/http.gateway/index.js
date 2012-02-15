@@ -9,11 +9,15 @@ tq = require('tq')
 require('./monkeypatch/response');
 
 
-exports.plugin = function(router, params) {
+exports.plugin = function(router) {
 
 
 
-	var use = [], server;
+	var use = [], 
+    server, 
+    httpParams  = this.params('http') || {},
+    httpsParams = this.params('https') || {},
+    publicDir   = this.params('publicDir');
 
 
 	
@@ -27,9 +31,9 @@ exports.plugin = function(router, params) {
         	//params present? start the http port
 			if(params)
 			{
-				if(params.http)
+				if(httpParams.port)
 				{
-					router.request('http/start', { port: params.http.port }).pull();
+					router.request('http/start', { port: httpParams.port }).pull();
 				}
 			}
 
@@ -59,8 +63,8 @@ exports.plugin = function(router, params) {
 
         	logger.info('http.gateway received server');
 
-            if(params.dir) 
-            	server.use(connect.static(params.dir));
+            if(publicDir) 
+            	server.use(connect.static(publicDir));
 
             server.use(function(req, res, next) {
             	
