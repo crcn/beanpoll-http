@@ -52,8 +52,7 @@ router.on({
 	/**
 	 */
 	
-	'pull basic/auth/user/pass -> secret/route': function()
-	{
+	'pull basic/auth/user/pass -> secret/route': function() {
 		return "authorized!";
 	},
 	
@@ -61,17 +60,17 @@ router.on({
 	/**
 	 */
 	
-	'pull secret/route': function(request)
-	{
-		function login(user, pass, callback)
-		{
+	'pull secret/route': function(request) {
+
+		function login(user, pass, callback) {
+
 			if(user == 'user' && pass == 'pass') return callback(false, { user: 'user' });
 			
 			callback('wrong user / pass');
 		}
 		
-		request.forward('basic/auth', { login: login }, function(response)
-		{
+		request.forward('basic/auth', { login: login }, function(response) {
+
 			request.end('authorized!');
 		})
 	}
@@ -88,8 +87,7 @@ router.on({
 	/**
 	 */
 	
-	'pull session -> account': function(request)
-	{
+	'pull session -> account': function(request) {
 		
 		//should be "test" on next call
 		console.log(request.session.data.username);
