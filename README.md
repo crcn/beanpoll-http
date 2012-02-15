@@ -33,7 +33,8 @@ loader.params({
 });
 
 loader.
-require('beanpoll-http');
+require('beanpoll-http').
+load();
 ```
 
 
