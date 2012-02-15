@@ -1,6 +1,6 @@
 
 // for npm link
-require('haba').paths(__dirname + '/beans');
+require('plugin').paths(__dirname + '/beans');
 
 exports.plugin = function(router)
 {

@@ -12,7 +12,7 @@
     },
     "dependencies": {
         "connect": "*",
-        "haba": "*",
+        "plugin": "*",
         "structr": "*",
         "vine": "*",
         "mime": "*",
