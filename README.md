@@ -6,7 +6,7 @@
 - easy to specify HTTP Middleware
 
 
-### Beans
+### Plugins
 
 - `http.gateway` exposes your beanpole routes over HTTP.
 - `http.server` starts up the http server.
