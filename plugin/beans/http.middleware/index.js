@@ -1,5 +1,4 @@
 var MemSessionManager = require('./session/session').MemSessionManager,
-	Cookie = require('./session/cookies').Cookie,
 	vine = require('vine'),
 	basic = require('./auth/basic'),
 	qs = require('querystring'),
