@@ -180,7 +180,7 @@
 			"file": "plugin/index.js",
 			"settings":
 			{
-				"buffer_size": 141,
+				"buffer_size": 144,
 				"line_ending": "Unix"
 			}
 		},
@@ -228,7 +228,15 @@
 			"file": "plugin/plugins/http.server/index.js",
 			"settings":
 			{
-				"buffer_size": 3509,
+				"buffer_size": 3247,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin UIgRMX.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -929,15 +937,15 @@
 					"file": "plugin/index.js",
 					"settings":
 					{
-						"buffer_size": 141,
+						"buffer_size": 144,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								32,
-								32
+								142,
+								142
 							]
 						],
 						"settings":
@@ -1086,15 +1094,15 @@
 					"file": "plugin/plugins/http.server/index.js",
 					"settings":
 					{
-						"buffer_size": 3509,
+						"buffer_size": 3247,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								695,
-								695
+								1859,
+								1859
 							]
 						],
 						"settings":
@@ -1104,13 +1112,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 255.0,
+						"translation.y": 839.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 27,
+					"file": "/tmp/subl stdin UIgRMX.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 28,
 					"file": "README.md",
 					"settings":
 					{
@@ -1137,7 +1171,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "plugin/plugins/http.gateway/index.js",
 					"settings":
 					{
@@ -1148,8 +1182,8 @@
 						"selection":
 						[
 							[
-								503,
-								503
+								423,
+								423
 							]
 						],
 						"settings":
@@ -1165,7 +1199,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "plugin/plugins/http.gateway/middleware/beanpoll.js",
 					"settings":
 					{
@@ -1192,7 +1226,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "/tmp/subl stdin q6qFJq.txt",
 					"settings":
 					{
@@ -1218,7 +1252,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "/tmp/subl stdin rnOixQ.txt",
 					"settings":
 					{
@@ -1244,7 +1278,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": ".cupboard",
 					"settings":
 					{
@@ -1270,7 +1304,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": "/tmp/subl stdin 1IMffh.txt",
 					"settings":
 					{

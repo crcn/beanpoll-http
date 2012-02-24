@@ -131,28 +131,32 @@ module.exports = function(router) {
 				
 				headers: function(response) {
 					
-						if(response.session)
-						{
+						if(response.session) {
+
 							rheaders['Set-Cookie'] = response.session.http;
+
 						}
 
 						//redirect to a different location
-						if(response.redirect)
-						{
+						if(response.redirect) {
+
 							response.statusCode = 301;
-							rheaders['Location'] = response.redirect.indexOf('://') > -1 ? response.redirect : 'http://' + (req.headers.host+'/'+response.redirect).replace(/\/+/g,'\/'); 
+							rheaders['Location'] = response.redirect.indexOf('://') > -1 ? response.redirect : 'http://' + (req.headers.host+'/'+response.redirect).replace(/\/+/g,'\/');
+
 						}
 
-						if(response.authorization)
-						{
+						if(response.authorization) {
+
 							rheaders['WWW-Authenticate'] = response.authorization.http;
 							response.statusCode = 401;
+
 						}
 
 
-						if(response.mime)
-						{
+						if(response.mime) {
+
 							mimeType = response.mime;
+
 						}
 
 
@@ -160,7 +164,7 @@ module.exports = function(router) {
 						//rheaders['Expires']		 = '17-Jan-2038 19:14:07 GMT';
 						rheaders['Connection'] 	 = 'keep-alive';
 						rheaders['Content-Type']  = urlParts.query.callback ? 'application/x-javascript' : mimeType;
-						rheaders['Cache-Control'] = 'max-age=29030400, public';
+						rheaders['Cache-Control'] = 'max-age='+(response.ttl || 0)+', public';
 						//rheaders['Transfer-Encoding'] = 'Chunked';
 						
 						res.writeHead(response.statusCode || 200, rheaders);

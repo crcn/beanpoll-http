@@ -75,9 +75,10 @@ exports.plugin = function(router, params)
                     
                     inst.pushed = true;
                     
-                    hostname(function(name)
-                    {
+                    hostname(function(name) {
+
                         router.push('http/host', httpHost = { hostname: name, port: port });
+                        
                     })
                     
                     res.end(inst);
@@ -140,7 +141,7 @@ exports.plugin = function(router, params)
 	    'pull http/host': function(req, res) {
 
 	    	res.end(httpHost);
-            
+
 	    }
 
     })
