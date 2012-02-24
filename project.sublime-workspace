@@ -233,6 +233,14 @@
 			}
 		},
 		{
+			"file": "/tmp/subl stdin GnYQKg.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "/tmp/subl stdin UIgRMX.txt",
 			"settings":
 			{
@@ -249,10 +257,13 @@
 			}
 		},
 		{
+			"contents": "var logger = require('winston').loggers.get('bean.http'),\nsprintf    = require('sprintf').sprintf,\nmime       = require('mime'),\n_          = require('underscore'),\nbeanpollMiddleware = require('./middleware/beanpoll'),\nconnect    = require('connect'),\ntq = require('tq')\n\nrequire('./monkeypatch/response');\n\n\nexports.plugin = function(router) {\n\n\n\n	var use = [], \n    server, \n    publicDir   = this.params('publicDir');\n\n\n\n	\n    router.on({\n\n    	/**\n    	 */\n\n        'push init': function()\n        {\n			router.on({\n				\n		        /**\n		         * middleware for the requests\n		         */\n\n		        'push -collect http/request/middleware OR connect/middleware': function(middleware)\n		        {\n		        	use.push(middleware);\n		        }\n			});\n	    },    \n        \n\n        /**\n         */\n         \n        'push http/server': function(srv)\n        {\n        	server = srv;\n\n        	logger.info('http.gateway received server');\n\n            if(publicDir) \n            	server.use(connect.static(publicDir));\n\n            server.use(function(req, res, next) {\n            	\n            	var q = tq.queue();\n\n            	use.forEach(function(mw) {\n            		\n            		q.push(function() {\n\n            			mw(req, res, this);\n\n            		});\n            	});\n\n            	q.push(next);\n\n            	q.start();\n            });\n            	\n            server.use(beanpollMiddleware(router));\n        }\n    });\n}",
 			"file": "plugin/plugins/http.gateway/index.js",
+			"file_size": 1432,
+			"file_write_time": 1330106442000000,
 			"settings":
 			{
-				"buffer_size": 1432,
+				"buffer_size": 1433,
 				"line_ending": "Unix"
 			}
 		},
@@ -260,7 +271,7 @@
 			"file": "plugin/plugins/http.gateway/middleware/beanpoll.js",
 			"settings":
 			{
-				"buffer_size": 5223,
+				"buffer_size": 5221,
 				"line_ending": "Unix"
 			}
 		},
@@ -397,7 +408,7 @@
 	"groups":
 	[
 		{
-			"selected": 26,
+			"selected": 31,
 			"sheets":
 			[
 				{
@@ -1112,14 +1123,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 839.0,
+						"translation.y": 209.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 27,
-					"file": "/tmp/subl stdin UIgRMX.txt",
+					"file": "/tmp/subl stdin GnYQKg.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1145,6 +1156,32 @@
 				},
 				{
 					"buffer": 28,
+					"file": "/tmp/subl stdin UIgRMX.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 29,
 					"file": "README.md",
 					"settings":
 					{
@@ -1171,19 +1208,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "plugin/plugins/http.gateway/index.js",
 					"settings":
 					{
-						"buffer_size": 1432,
+						"buffer_size": 1433,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								423,
-								423
+								424,
+								424
 							]
 						],
 						"settings":
@@ -1193,25 +1230,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 209.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "plugin/plugins/http.gateway/middleware/beanpoll.js",
 					"settings":
 					{
-						"buffer_size": 5223,
+						"buffer_size": 5221,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4338,
-								4338
+								4551,
+								4551
 							]
 						],
 						"settings":
@@ -1219,14 +1256,14 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 58.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 2145.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "/tmp/subl stdin q6qFJq.txt",
 					"settings":
 					{
@@ -1252,7 +1289,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": "/tmp/subl stdin rnOixQ.txt",
 					"settings":
 					{
@@ -1278,7 +1315,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": ".cupboard",
 					"settings":
 					{
@@ -1304,7 +1341,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 35,
 					"file": "/tmp/subl stdin 1IMffh.txt",
 					"settings":
 					{
