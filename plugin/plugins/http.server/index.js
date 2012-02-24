@@ -12,13 +12,18 @@ exports.plugin = function(router, params)
 
 	var servers = { }, _hostname, httpHost;
 
-	function hostname(callback)
-	{
+
+    var httpParams  = this.params('http') || {},
+    httpsParams = this.params('https') || {};
+
+	function hostname(callback) {
+
 		if(_hostname) return callback(_hostname);
 
-		exec('hostname', function(err, hostname)
-		{
+		exec('hostname', function(err, hostname) {
+
 			callback(_hostname = hostname.replace('\n',''));
+
 		})
 	}
     
@@ -29,33 +34,38 @@ exports.plugin = function(router, params)
     	/**
     	 */
 
-        'push init': function()
-        {
+        'push init': function() {
+
+            
         	//params present? start the http port
-			if(params)
-			{
-				if(params.http)
-				{
-					router.pull('http/start', params.http, function(){});
-				}
-			}
+            if(httpParams.port) {
+
+                router.pull('http/start', httpParams, function(){});
+
+            }
+
+            //params present? start the http port
+            if(httpsParams.port) {
+
+                router.pull('http/start', httpsParams, function(){});
+
+            }
 	    },  
 
 	    /**
 	     */
 
-	    'pull http/start': function(req, res)
-	    {
+	    'pull http/start': function(req, res) {
+
 	    	var secure = req.query.secure,
-	    	port = req.query.port || (secure ? 443 : 8000),
+	    	port = Number(req.query.port || (secure ? 443 : 8000)),
 		    serv = secure ? https : http,
             cached = servers[secure];
             
+            function listen(inst) {
 
-            function listen(inst)
-            {
-                try
-                {
+                try {
+
                     inst.listen(port);
                     inst.port = port;
 
@@ -71,9 +81,9 @@ exports.plugin = function(router, params)
                     })
                     
                     res.end(inst);
-                }
-                catch(e)
-                {
+
+                } catch(e) {
+
                     var msg = 'Unable to start http server on port %d';
                     
                     console.warn(sprintf(msg, port));
@@ -84,39 +94,40 @@ exports.plugin = function(router, params)
                 return inst;
             }
 	    	
-	    	if(cached)
-            {
-                function onCached()
-                {
+	    	if(cached) {
+
+                function onCached() {
+
                     listen(cached);
+
                 };
                 
-                if(cached.fd && cached.port != port)
-                {
-                    try
-                    {
+                if(cached.fd && cached.port != port) {
+
+                    try {
+
                         cached.once('close', onCached);
                         cached.close();
-                    }
-                    catch(e)
-                    {
+
+                    } catch(e) {
+
                         onCached();
                     }
-                }
-                else
-                {   
+                } else {   
 
-                    if(cached.fd)
-                    {
+                    if(cached.fd) {
+
                         logger.info(sprintf('http server on port %s is already running', cached.port));
                         res.end(cached);
-                    }
-                    else
-                    {
+
+                    } else {
+
                         listen(cached);
+
                     }
                     
                 }
+
                 return;
             }
 
@@ -126,9 +137,10 @@ exports.plugin = function(router, params)
 	    /**
 	     */
 
-	    'pull http/host': function(req, res)
-	    {
+	    'pull http/host': function(req, res) {
+
 	    	res.end(httpHost);
+            
 	    }
 
     })

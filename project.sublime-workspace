@@ -137,7 +137,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 613,
+				"buffer_size": 535,
 				"line_ending": "Unix"
 			}
 		},
@@ -228,7 +228,7 @@
 			"file": "plugin/plugins/http.server/index.js",
 			"settings":
 			{
-				"buffer_size": 3202,
+				"buffer_size": 3509,
 				"line_ending": "Unix"
 			}
 		},
@@ -244,7 +244,7 @@
 			"file": "plugin/plugins/http.gateway/index.js",
 			"settings":
 			{
-				"buffer_size": 1703,
+				"buffer_size": 1432,
 				"line_ending": "Unix"
 			}
 		},
@@ -277,6 +277,14 @@
 			"settings":
 			{
 				"buffer_size": 87,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin 1IMffh.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -325,6 +333,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"publicDir",
+			"httpParams",
 			"params",
 			"params.",
 			"req.meth",
@@ -379,7 +389,7 @@
 	"groups":
 	[
 		{
-			"selected": 32,
+			"selected": 26,
 			"sheets":
 			[
 				{
@@ -785,21 +795,21 @@
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 613,
+						"buffer_size": 535,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								347,
-								347
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -1076,15 +1086,15 @@
 					"file": "plugin/plugins/http.server/index.js",
 					"settings":
 					{
-						"buffer_size": 3202,
+						"buffer_size": 3509,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								317,
-								321
+								695,
+								695
 							]
 						],
 						"settings":
@@ -1094,7 +1104,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 255.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1131,15 +1141,15 @@
 					"file": "plugin/plugins/http.gateway/index.js",
 					"settings":
 					{
-						"buffer_size": 1703,
+						"buffer_size": 1432,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								493,
-								493
+								503,
+								503
 							]
 						],
 						"settings":
@@ -1149,7 +1159,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 479.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1247,6 +1257,32 @@
 							[
 								87,
 								87
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "/tmp/subl stdin 1IMffh.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":

@@ -15,8 +15,6 @@ exports.plugin = function(router) {
 
 	var use = [], 
     server, 
-    httpParams  = this.params('http') || {},
-    httpsParams = this.params('https') || {},
     publicDir   = this.params('publicDir');
 
 
@@ -28,13 +26,6 @@ exports.plugin = function(router) {
 
         'push init': function()
         {
-        	//params present? start the http port
-			if(httpParams.port)
-            {
-                router.request('http/start', { port: httpParams.port }).pull();
-            }
-
-
 			router.on({
 				
 		        /**
