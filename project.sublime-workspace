@@ -137,7 +137,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 535,
+				"buffer_size": 613,
 				"line_ending": "Unix"
 			}
 		},
@@ -271,7 +271,15 @@
 			"file": "plugin/plugins/http.gateway/middleware/beanpoll.js",
 			"settings":
 			{
-				"buffer_size": 5221,
+				"buffer_size": 5427,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin lsKmRW.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -814,7 +822,7 @@
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 535,
+						"buffer_size": 613,
 						"regions":
 						{
 						},
@@ -828,7 +836,7 @@
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -1123,7 +1131,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 209.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1240,15 +1248,15 @@
 					"file": "plugin/plugins/http.gateway/middleware/beanpoll.js",
 					"settings":
 					{
-						"buffer_size": 5221,
+						"buffer_size": 5427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4551,
-								4551
+								4206,
+								4206
 							]
 						],
 						"settings":
@@ -1257,14 +1265,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2145.0,
+						"translation.y": 2310.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 32,
-					"file": "/tmp/subl stdin q6qFJq.txt",
+					"file": "/tmp/subl stdin lsKmRW.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1290,7 +1298,7 @@
 				},
 				{
 					"buffer": 33,
-					"file": "/tmp/subl stdin rnOixQ.txt",
+					"file": "/tmp/subl stdin q6qFJq.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1316,6 +1324,32 @@
 				},
 				{
 					"buffer": 34,
+					"file": "/tmp/subl stdin rnOixQ.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 35,
 					"file": ".cupboard",
 					"settings":
 					{
@@ -1341,7 +1375,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 35,
+					"buffer": 36,
 					"file": "/tmp/subl stdin 1IMffh.txt",
 					"settings":
 					{

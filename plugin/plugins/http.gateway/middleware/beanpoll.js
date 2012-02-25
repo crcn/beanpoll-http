@@ -159,6 +159,10 @@ module.exports = function(router) {
 
 						}
 
+						if(response.purge) {
+							if(response.purge.regex) rheaders['X-Purge-Regex'] = response.purge.regex.toString();
+							if(response.purge.path) rheaders['X-Purge-URL'] = response.purge.path;
+						}
 
 
 						//rheaders['Expires']		 = '17-Jan-2038 19:14:07 GMT';
