@@ -192,8 +192,7 @@ module.exports = function(router) {
 
 
 
-
-					if(data instanceof Object) {
+					if(data instanceof Object && rheaders['Content-Type'].indexOf('javascript') > -1) {
 
 						chunk = query.pretty != undefined ? JSON.stringify(data, null, 2) : JSON.stringify(data);
 
@@ -209,7 +208,7 @@ module.exports = function(router) {
 
 
 					//callback provided? wrap the response up
-					if(urlParts.query.callback) chunk = urlParts.query.callback +' (' + chunk + ');';
+					// if(urlParts.query.callback) chunk = urlParts.query.callback +' (' + chunk + ');';
 
 					//send the chunk
 					res.write(chunk, encoding);

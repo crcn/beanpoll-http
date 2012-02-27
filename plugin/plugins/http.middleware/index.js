@@ -108,7 +108,7 @@ exports.plugin = function(router)
 			var body = '';
 			parser = bodyParser[request.req.headers['content-type']] || bodyParser['application/x-www-form-urlencoded'];
 			
-			request.req.on('data', function(chunk)
+			request.req.on('data', function(chunk, encoding)
 			{
 				body += chunk;
 			});
