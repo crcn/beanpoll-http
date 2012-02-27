@@ -192,23 +192,26 @@ module.exports = function(router) {
 
 
 
-					if(data instanceof Object && !(data instanceof Buffer)) {
+					if(!(data instanceof Buffer)) {
+						if(data instanceof Object) {
 
-						chunk = query.pretty != undefined ? JSON.stringify(data, null, 2) : JSON.stringify(data);
+							chunk = query.pretty != undefined ? JSON.stringify(data, null, 2) : JSON.stringify(data);
 
-						if(data.errors) {
+							if(data.errors) {
 
-							data.errors.forEach(function(error) {
+								data.errors.forEach(function(error) {
 
-								console.log('Error Response: ' + error.message);
-							});
+									console.log('Error Response: ' + error.message);
+								});
+							}
 						}
+
+
+
+						//callback provided? wrap the response up
+						if(urlParts.query.callback) chunk = urlParts.query.callback +' (' + chunk + ');';
 					}
-
-
-
-					//callback provided? wrap the response up
-					// if(urlParts.query.callback) chunk = urlParts.query.callback +' (' + chunk + ');';
+					
 
 					//send the chunk
 					res.write(chunk, encoding);
