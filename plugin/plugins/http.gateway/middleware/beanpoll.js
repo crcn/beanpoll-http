@@ -192,7 +192,7 @@ module.exports = function(router) {
 
 
 
-					if(data instanceof Object && rheaders['Content-Type'].indexOf('javascript') > -1) {
+					if(data instanceof Object && !(data instanceof Buffer)) {
 
 						chunk = query.pretty != undefined ? JSON.stringify(data, null, 2) : JSON.stringify(data);
 
