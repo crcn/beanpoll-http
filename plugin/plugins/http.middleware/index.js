@@ -59,9 +59,9 @@ exports.plugin = function(router)
 		 * basic authentication passthru
 		 */
 
-		'pull -private (basic/auth/:user/:pass OR basic/auth)': function()
+		'pull -private (basic/auth/:user/:pass OR basic/auth)': function(req, res)
 		{
-			if(!this.req) return vine.error('basic auth is specific to http for now').end();
+			if(!this.req) return vine.error('basic auth is specific to http for now').end(req, res);
 
 			var self = this;
 
@@ -83,7 +83,6 @@ exports.plugin = function(router)
 				{
 					if(err)
 					{
-						
 						if(self.data.basicAuth == undefined || self.data.basicAuth) self.respond({ authorization: { http: err } });
 
 						return self.end(vine.error('Unauthorized.').end());
@@ -101,30 +100,28 @@ exports.plugin = function(router)
 		 * parses post body
 		 */
 
-		'pull -private parse/body': function(request)
+		'pull -private parse/body': function(req, res, mw)
 		{
-			if(!request.req) return vine.error('parse/body is only usable on http requests').end();
-			
 			var body = '';
-			parser = bodyParser[request.req.headers['content-type']] || bodyParser['application/x-www-form-urlencoded'];
+			parser = bodyParser[req.headers['content-type']] || bodyParser['application/x-www-form-urlencoded'];
 			
-			request.req.on('data', function(chunk, encoding)
+			req.on('data', function(chunk, encoding)
 			{
 				body += chunk;
 			});
 			                          
-			request.req.on('end', function(chunk)
+			req.on('end', function(chunk)
 			{
 				try
 				{                          
-					Structr.copy(request.body = body && parser ? parser(body) : body || {}, request.data);                      
+					Structr.copy(req.body = body && parser ? parser(body) : body || {}, req.data);                      
 				}
 				catch(e)
 				{                    
-					request.body = null;
+					req.body = null;
 				}
 				
-				request.next();
+				mw.next();
 			});
 		}
 	})

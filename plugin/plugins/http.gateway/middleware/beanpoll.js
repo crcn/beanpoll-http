@@ -77,7 +77,8 @@ module.exports = function(router) {
 		}
 
 
-		request.
+
+		var stream = request.
 
 		//prepares the request
 		pre(function(req, res, mw) {
@@ -225,5 +226,8 @@ module.exports = function(router) {
 
 		}).
 		pull();
+
+		req.pipe(stream);
+
 	}
 }

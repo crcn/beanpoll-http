@@ -142,6 +142,22 @@
 			}
 		},
 		{
+			"file": "/tmp/subl stdin 1k98BB.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin 2nUTYG.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "plugin/beans/http.server/index.js",
 			"settings":
 			{
@@ -271,7 +287,23 @@
 			"file": "plugin/plugins/http.gateway/middleware/beanpoll.js",
 			"settings":
 			{
-				"buffer_size": 5427,
+				"buffer_size": 5486,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin GcmQ4J.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin 3qq3iB.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -312,6 +344,14 @@
 			"settings":
 			{
 				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "plugin/plugins/http.middleware/index.js",
+			"settings":
+			{
+				"buffer_size": 2721,
 				"line_ending": "Unix"
 			}
 		}
@@ -360,6 +400,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"structr",
+			"Structr",
 			"publicDir",
 			"httpParams",
 			"params",
@@ -416,7 +458,7 @@
 	"groups":
 	[
 		{
-			"selected": 31,
+			"selected": 33,
 			"sheets":
 			[
 				{
@@ -847,6 +889,58 @@
 				},
 				{
 					"buffer": 16,
+					"file": "/tmp/subl stdin 1k98BB.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/tmp/subl stdin 2nUTYG.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
 					"file": "plugin/beans/http.server/index.js",
 					"settings":
 					{
@@ -874,7 +968,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 19,
 					"file": "/tmp/subl stdin nVXxav.txt",
 					"settings":
 					{
@@ -900,7 +994,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 20,
 					"file": "/tmp/subl stdin WaOk4s.txt",
 					"settings":
 					{
@@ -926,7 +1020,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 21,
 					"file": "plugin/beans/http.gateway/modules/error/index.js",
 					"settings":
 					{
@@ -952,7 +1046,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 22,
 					"file": "plugin/index.js",
 					"settings":
 					{
@@ -963,8 +1057,8 @@
 						"selection":
 						[
 							[
-								142,
-								142
+								65,
+								65
 							]
 						],
 						"settings":
@@ -978,7 +1072,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 23,
 					"file": "/tmp/subl stdin wFcRuC.txt",
 					"settings":
 					{
@@ -1004,7 +1098,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 24,
 					"file": "plugin/beans/http.gateway/modules/sendError/index.js",
 					"settings":
 					{
@@ -1030,7 +1124,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 25,
 					"file": "plugin/beans/http.gateway/middleware/beanpoll.js",
 					"settings":
 					{
@@ -1057,7 +1151,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 26,
 					"file": "/tmp/subl stdin UAcpJ1.txt",
 					"settings":
 					{
@@ -1083,7 +1177,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 27,
 					"file": "/tmp/subl stdin tsqbm2.txt",
 					"settings":
 					{
@@ -1109,7 +1203,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 28,
 					"file": "plugin/plugins/http.server/index.js",
 					"settings":
 					{
@@ -1120,8 +1214,8 @@
 						"selection":
 						[
 							[
-								1859,
-								1859
+								167,
+								169
 							]
 						],
 						"settings":
@@ -1137,7 +1231,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 29,
 					"file": "/tmp/subl stdin GnYQKg.txt",
 					"settings":
 					{
@@ -1163,7 +1257,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 30,
 					"file": "/tmp/subl stdin UIgRMX.txt",
 					"settings":
 					{
@@ -1189,7 +1283,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 31,
 					"file": "README.md",
 					"settings":
 					{
@@ -1216,7 +1310,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 32,
 					"file": "plugin/plugins/http.gateway/index.js",
 					"settings":
 					{
@@ -1227,8 +1321,8 @@
 						"selection":
 						[
 							[
-								424,
-								424
+								271,
+								271
 							]
 						],
 						"settings":
@@ -1238,25 +1332,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 209.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 33,
 					"file": "plugin/plugins/http.gateway/middleware/beanpoll.js",
 					"settings":
 					{
-						"buffer_size": 5427,
+						"buffer_size": 5486,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4206,
-								4206
+								1284,
+								1287
 							]
 						],
 						"settings":
@@ -1265,66 +1359,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2310.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 32,
-					"file": "/tmp/subl stdin lsKmRW.txt",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 33,
-					"file": "/tmp/subl stdin q6qFJq.txt",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 519.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 34,
-					"file": "/tmp/subl stdin rnOixQ.txt",
+					"file": "/tmp/subl stdin GcmQ4J.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1350,6 +1392,110 @@
 				},
 				{
 					"buffer": 35,
+					"file": "/tmp/subl stdin 3qq3iB.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": "/tmp/subl stdin lsKmRW.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 37,
+					"file": "/tmp/subl stdin q6qFJq.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 38,
+					"file": "/tmp/subl stdin rnOixQ.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 39,
 					"file": ".cupboard",
 					"settings":
 					{
@@ -1375,7 +1521,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 36,
+					"buffer": 40,
 					"file": "/tmp/subl stdin 1IMffh.txt",
 					"settings":
 					{
@@ -1396,6 +1542,33 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 41,
+					"file": "plugin/plugins/http.middleware/index.js",
+					"settings":
+					{
+						"buffer_size": 2721,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2494,
+								2501
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1202.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
