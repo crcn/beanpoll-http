@@ -6,5 +6,4 @@ exports.plugin = function(router) {
 
 	this.require(__dirname + '/plugins');
 
-	
 }

@@ -59,7 +59,7 @@ exports.plugin = function(router)
 		 * basic authentication passthru
 		 */
 
-		'pull -private (basic/auth/:user/:pass OR basic/auth)': function(req, res)
+		'pull -private basic/auth/:user/:pass OR basic/auth': function(req, res)
 		{
 			if(!this.req) return vine.error('basic auth is specific to http for now').end(req, res);
 

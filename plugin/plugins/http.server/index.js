@@ -36,6 +36,7 @@ exports.plugin = function(router, params)
 
         'push init': function() {
 
+
             
         	//params present? start the http port
             if(httpParams.port) {
