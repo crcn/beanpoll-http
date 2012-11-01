@@ -7,6 +7,7 @@ exports.queue = function() {
 		var callback = queue.pop();
 
 		if(!callback || !started) {
+			pargs = arguments;
 			running = false;
 			return;
 		}
@@ -18,7 +19,8 @@ exports.queue = function() {
 	running = false,
 	started = false,
 	queue = [],
-	em = new EventEmitter();
+	em = new EventEmitter(),
+	pargs = [];
 
 	var self = {
 
@@ -30,7 +32,7 @@ exports.queue = function() {
 			queue.unshift(callback);
 
 			if(!running && started) {
-				next();
+				next.apply(null, pargs);
 			}
 
 			return this;

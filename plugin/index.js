@@ -1,9 +1,7 @@
 
 // for npm link
-require('plugin').paths(__dirname + '/beans');
+exports.require = [__dirname + "/plugins"];
 
-exports.plugin = function(router) {
-
-	this.require(__dirname + '/plugins');
-
+exports.plugin = function() {
+	//do nothing
 }

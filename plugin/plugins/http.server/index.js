@@ -7,14 +7,14 @@ logger = require('winston').loggers.get('bean.http'),
 sprintf = require('sprintf').sprintf;
 
 
-exports.plugin = function(router, params) 
+exports.plugin = function(router, loader) 
 {
 
 	var servers = { }, _hostname, httpHost;
 
 
-    var httpParams  = this.params('http') || {},
-    httpsParams = this.params('https') || {};
+    var httpParams  = loader.params('http') || {},
+    httpsParams = loader.params('https') || {};
 
 	function hostname(callback) {
 

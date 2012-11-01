@@ -9,13 +9,13 @@ tq = require('tq')
 require('./monkeypatch/response');
 
 
-exports.plugin = function(router) {
+exports.plugin = function(router, loader) {
 
 
 
 	var use = [], 
     server, 
-    publicDir   = this.params('publicDir');
+    publicDir   = loader.params('publicDir');
 
 
 	
